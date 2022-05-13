@@ -60,14 +60,14 @@ body {
 
 <div id="display">
 
- <div class="container darker">
+ <!-- <div class="container darker">
   <b>Tom</b><p>Hello Everyone, How Are You Guys Doing?</p>
   <span class="time-left">20th, April 2021</span>
-</div>
+</div> -->
 
 </div>
 
-<!-- <script>
+<script>
 $(document).ready(function(){
 
 setInterval(function(){
@@ -89,7 +89,7 @@ setInterval(function(){
     });
 },1000);
 })
-</script> -->
+</script>
 
 
 <div class="container">
@@ -130,7 +130,7 @@ setInterval(function(){
         {% csrf_token %}
         <input type="hidden" name="username" id="username" value="{{username}}"/>
         <input type="hidden" name="room_id" id="room_id" value="{{room_details.id}}"/>
-        <input type="text" name="message" id="message" width="100px" />
+        <input type="text" name="message" id="message" width="100px" placeholder="Enter a message:"/>
         <input type="submit" value="Send">
     </form>
 </div>
@@ -152,7 +152,7 @@ setInterval(function(){
         csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
       },
       success: function(data){
-        alert(data)
+        //alert(data)
       }
     });
     document.getElementById('message').value = ''

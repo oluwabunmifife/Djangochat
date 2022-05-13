@@ -2,7 +2,7 @@ from multiprocessing.sharedctypes import Value
 from unicodedata import name
 from django.shortcuts import render, redirect
 from .models import Room, Message
-from django.http import HttpResponse
+from django.http import HttpResponse,JsonResponse
 
 # Create your views here.
 def home(request):
@@ -36,3 +36,9 @@ def send(request):
     new_message = Message.objects.create(value=message, user=username, room=room_id)
     new_message.save()
     return HttpResponse('Message sent succcesfully')
+
+def getMessages(request, room):
+    room_details = Room.objects.get(name=room)
+
+    messages = Message.objects.filter(room=room_details.id)
+    return JsonResponse({"messages":list(messages.values())})
