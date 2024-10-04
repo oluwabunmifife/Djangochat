@@ -1,0 +1,8 @@
+cffi @ file:///private/tmp/cffi-20231014-5567-1hyue8f/cffi-1.16.0
+cryptography==43.0.0
+docutils @ file:///private/tmp/docutils-20231123-5398-yh30nc/docutils-0.20.1
+pycparser==2.22
+pywatchman==2.0.0
+setuptools @ file:///private/tmp/python-setuptools-20231122-5040-cvipch/setuptools-69.0.2
+six==1.16.0
+wheel @ file:///opt/homebrew/Cellar/python%403.12/3.12.5/libexec/wheel-0.44.0-py3-none-any.whl#sha256=8d8a590e50bda8422000110e90bc730ebfcd8363d2de80793ac819b7f252e97d

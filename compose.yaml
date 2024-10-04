@@ -1,0 +1,15 @@
+services:
+  db:
+    image: nouchka/sqlite3:latest
+    volumes:
+      - ./data/db:/root/db
+    environment:
+      - SQLITE3_DB=db.sqlite3
+  web:
+    build: .
+    image: fifss/test-chat:v1
+    command: python3.9 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:80
